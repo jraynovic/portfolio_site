@@ -1,0 +1,33 @@
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+#homeCarousel{
+    background-color: #f2a51a;
+    height: 300px;
+}
+.card-header{
+    background-color: #f2a51a;
+}
+.navbar{
+    margin-bottom: 0;
+}
+nav{
+    background-color: #f2a51a;
+    margin-bottom: 0;
+}
+.parralax {
+   background-image: url("img\\traffic.jpg");
+   height: 250px;
+  
+   background-attachment: fixed;
+   background-position: top;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position-y: -300px;
+}
+ h1{
+     font-size: 7em;
+ }
+ h2{
+     font-size: 3em;
+ }
