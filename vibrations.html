@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <title>Forms</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top  ">
+        <a class="navbar-brand ml-5" href="index.html"><img src="styles\img\port_logo.png" height="70" width="70" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="forms.html">Forms</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="forms.html">forms</a></li>
+                <li class="breadcrumb-item active">vibrations</li>
+            </ol> 
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>A Vibration Then</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 card">
+                
+                    <div class="row card-header">
+                        <div class="col text-center text-black">
+                            <h3>When does it happen?</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col text-center">
+                                <p>select all that apply</p>
+                            </div>
+                        </div>
+                        <form class="form-group">
+                            <div class="row">
+                                <div class="col form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="anytime">
+                                    <label class="form-check-label" for="anytime">
+                                      Any time
+                                    </label> 
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="intermittently">
+                                    <label class="form-check-label" for="intermittently">
+                                    Only intermittently
+                                    </label>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="coldVehicle">
+                                    <label class="form-check-label" for="coldVehicle">
+                                    Only when the vehicle is first started
+                                    </label>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="warmVehicle">
+                                    <label class="form-check-label" for="warmVehicle">
+                                    After the vehicle has been driven
+                                    </label>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="coldWeather">
+                                    <label class="form-check-label" for="coldWeather">
+                                    In cold weather
+                                    </label>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="warmWeather">
+                                    <label class="form-check-label" for="warmWeather">
+                                    Warm weather
+                                    </label>
+                                </div>
+                            </div>
+                            </form>
+                           
+                            <!-- <div class="form-group row">
+                                <label for="vibration" class="col-sm-6 col-form-label">Select this if you have a vibration</label>
+                                <div class="col-md-6">
+                                    <button name='vibration' id='vibration' class="btn btn-primary btn-lg">Vibrations</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="clank" class="col-sm-6 col-form-label">Select this if you have a noise like a clank, or bang</label>
+                                <div class="col-md-6">
+                                    <button name='clank' id='clank' class="btn btn-primary btn-lg">Clanks</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="clank" class="col-sm-6 col-form-label">Select this if you have a squeak or a rattle</label>
+                                <div class="col-md-6">
+                                    <button name='clank' id='clank' class="btn btn-primary btn-lg">Sqeaks/Rattle</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="clank" class="col-sm-6 col-form-label">Select this if nothing fits your concern.</label>
+                                <div class="col-md-6">
+                                    <button name='clank' id='clank' class="btn btn-primary btn-lg">Something else</button>
+                                </div>
+                            </div> -->
+                        </form>
+                        </div>      
+                     </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
