@@ -35,7 +35,7 @@
         <div class="row">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">forms</li>
+                <li  class="breadcrumb-item active">forms</li>
             </ol> 
         </div>
         <div class="row">
@@ -43,6 +43,7 @@
                 <h3>Lets get <br> get started!</h3>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-6 card">
                 
@@ -58,28 +59,28 @@
                                 <label for="vibration" class="col-sm-6 col-form-label">Select this if you have a vibration</label>
                                 <div class="col-md-6 text-right">
                                  
-                                    <a name='vibration' id='vibration' class="btn btn-primary btn-lg" href ='vibrations.html'> Vibrations</a>
+                                    <a name='vibration' onclick="formSelected('vibration')" id='vibration' class="btn btn-primary btn-lg" href ='questions.html'> Vibrations</a>
                                 </div>
                             </div>
                             <hr>
                             <div class="form-group row">
                                 <label for="clank" class="col-sm-6 col-form-label">Select this if you have a noise like a clank, or bang</label>
                                 <div class="col-md-6 text-right">
-                                    <button name='clank' id='clank' class="btn btn-primary btn-lg">Clanks</button>
+                                    <a href="questions.html" onclick="formSelected('clank')" name='clank' id='clank' class="btn btn-primary btn-lg">Clanks</a>
                                 </div>
                             </div>
                             <hr>
                             <div class="form-group row">
-                                <label for="clank" class="col-sm-6 col-form-label">Select this if you have a squeak or a rattle</label>
+                                <label for="squeak" class="col-sm-6 col-form-label">Select this if you have a squeak or a rattle</label>
                                 <div class="col-md-6 text-right">
-                                    <button name='clank' id='clank' class="btn btn-primary btn-lg">Sqeaks/Rattle</button>
+                                    <a href="questions.html" onclick="formSelected('squeak')" name='squeak' id='squeak'  class="btn btn-primary btn-lg">Sqeaks/Rattle</a>
                                 </div>
                             </div>
                             <hr>
                             <div class="form-group row">
-                                <label for="clank" class="col-sm-6 col-form-label">Select this if nothing fits your concern.</label>
+                                <label for="somethingElse" class="col-sm-6 col-form-label">Select this if nothing fits your concern.</label>
                                 <div class="col-md-6 text-right">
-                                    <button name='clank' id='clank' class="btn btn-primary btn-lg">Something else</button>
+                                    <a href="questions.html" onclick="formSelected('somethingElse')" name='somethingElse' id='somethingElse'  class="btn btn-primary btn-lg">Something else</a>
                                 </div>
                             </div>
                         </form>
@@ -148,5 +149,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/forms.js"></script>
 </body>
 </html>
