@@ -1,10 +1,6 @@
 
-// document.querySelector('#clank').onclick(localStorage.setItem('form','clank'));
-// document.querySelector('#vibration').onclick(localStorage.setItem('form','vibration'));
-
-
 function formSelected(choiceMade) {
-    localStorage.setItem('form',choiceMade)
+    sessionStorage.setItem('form',choiceMade)
   }
 
  
@@ -12,8 +8,5 @@ function formSelected(choiceMade) {
 
 
 
-    // window.onload = function() {
-    //     var getInput = prompt("Hey type something here: ");
-    //     localStorage.setItem("storageName",getInput);
-    //  }
+
 
