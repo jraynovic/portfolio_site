@@ -132,10 +132,12 @@
             console.log('questions finished')
             document.querySelector('.card-body').innerHTML = 'All Finshed\n Submit';
             document.querySelector('#cardHeader').innerHTML = 'Finished';
-            window.open('mailto:test@example.com'); // **FIX ME*** update mail address with selected option and add correct information ot body from local stoarge. 
-            completedForm = 'This still needs filled out';
-            window.open('mailto:test@example.com?subject="Vehicle noise concerns"&body="'+completedForm+'"');
+            
         }
     }
+     // **FIX ME*** update mail address with selected option and add correct information ot body from local stoarge. 
+            // window.open('mailto:test@example.com');
+            // completedForm = 'This still needs filled out';
+            // window.open('mailto:test@example.com?subject="Vehicle noise concerns"&body="'+completedForm+'"');
 
 

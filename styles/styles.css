@@ -32,5 +32,11 @@ nav{
      font-size: 3em;
  }
 .bg-theme{
-    background-color: #b9ebcc;
+    background-color: #f2a51a;
+}
+.abtCardHeader{
+    background-color: white;
+}
+.siteFooter{
+    background-color: #f2a51a;
 }

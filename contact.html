@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top  ">
+        <a class="navbar-brand ml-5" href="#"><img src="styles\img\port_logo.png" height="70" width="70" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="forms.html">Forms</a>
+            </li>
+            <li class="nav-item active">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li  class="breadcrumb-item active">contact</li>
+            </ol> 
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Contact <br> us today!</h2>
+            </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-12">
+                <h3>We are ready to help!</h3>
+                <hr />
+            </div>
+            <div class="col-md-10">
+                <form>
+                    <div class="row form-group">
+                        <label for="firstName" class="col-md-2 col-form-label"> First Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="firstName" placeholder="First Name" id="firstName"/>    
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="lastName" placeholder="Last Name" id="lastName">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="businessName" class="col-md-2 col-form-label">Business Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="businessName" placeholder="Business name (if applicable)" id="businessName">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="areaCode" class="col-md-2 col-form-label">Contact Tel.</label>
+                        <div class="col-4 col-md-2">
+                            <input type="tel" class="form-control" name="areaCode" placeholder="Area Code" id="areaCode">
+                        </div>
+                        <div class="col-8">
+                            <input type="tel" class="form-control" name="telNum" placeholder="Tel. number" id="">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="email" class="col-md-2 col-form-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col offset-md-2">
+                            Are you an individual or repair shop? 
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" name="typeRadios" value='individual' id="individual">
+                                <label for="individual" class="form-check-label">Individual</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" name="typeRadios" value='shop' id="shop">
+                                <label for="shop" class="form-check-label">Repair shop</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col offset-md-2">
+                            May we contact you? 
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" name="contactRadios" value='yes' id="contactYes">
+                                <label for="contactYes" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" name="contactRadios" value='no' id="contactNo">
+                                <label for="contactNo" class="form-check-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="feedback" class="col-md-2  col-form-label" >Your Feedback</label>
+                        <div class="col-md-10">
+                            <Textarea class="form-control" name="feedback" rows="8" id="feedback"></Textarea>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="offset-md-2 col-md-10 text-center">
+                            <button class="btn btn-primary" type="submit">Send Feedback</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+       </div>
+
+    </div>
+    <footer class="siteFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 mt-2 text-center">
+                    <h5 class="mr-1">Links</h5>
+                    <a class="text-white ml-1 mr-1" href="index.html">Home</a>
+                    <a class="text-white ml-1 mr-1" href="forms.html">Forms</a>
+                    <a class="text-white ml-1" href="contact.html">Contact</a>
+                </div>
+                <div class="col-sm-4 mt-2 text-center">
+                    <h5 >Social</h5>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="text-white fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="text-white fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="text-white fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="text-white fa fa-youtube"></i></a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a role="button" class="btn btn-link text-white" href="tel:+1-360-777-1234"><i class="fa fa-phone text-white"></i> 1-360-777-1234</a> <br>
+                    <a role="button" class="btn btn-link text-white" href="mailto: contact@circletheproblem.com"><i class="fa fa-envelope-o text-white"></i> contact@circletheproblem.com </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
