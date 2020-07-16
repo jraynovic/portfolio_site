@@ -1,8 +1,5 @@
 
     let formChosen = sessionStorage.getItem("form")
-    console.log(formChosen)
-    //select what form to use then build from from the list of available lists
-    // ***FIX ME*** lists need to be completed. Generic text is in place to test function
     if(formChosen == 'vibration'){
         var firstQuestions = ['Any time','Only intermittently', 'Only when the vehicle is first started',
         'After the vehicle has been driven', 'In cold weather', 'In warm weather','Its something else'];
@@ -76,11 +73,9 @@
         var newText = buildQuestions(progress)
         document.querySelector('.card-body').innerHTML = newText 
     }
-
     // simple function to build the html of the questions
     function buildQuestion(i=' ',f =' ',txt=' '){
         let newHtml = '<div class=\"row\"><div class=\"col form-check\"> <input class=\"form-check-input\" type=\"checkbox\" value=\"\" id="'+i+'\"><label id=\"'+i+'label'+'\" class=\"form-check-label\" for=\"'+f+'\">'+txt+'</label> </div></div><hr>';
-
         return newHtml
     }
 
@@ -92,13 +87,24 @@
         var currentQuestions = '';
         for(i=0;i<questions.length;i++){       
             currentQuestions += buildQuestion(ids[i],ids[i],questions[i])     
-        }
-        
+        }    
         currentQuestions += '<div class="form-group row"><div class="col text-right"><a id="nxtBtn" onclick="incProgress()" class="btn btn-primary text-white">NEXT</a></div></div>'
         // document.querySelector('#image').src = imgLocs[0]; // **FIX ME** uncomment and correct when image library is created.    
         return currentQuestions  
     }
-
+    //funtion to create the finished card after the questions are complete
+    function makeFinished(){
+        let finAnswers = [];
+        let concHtml=' ';
+        for(i=0;i<progress;i++){
+            let txt = cardHeaders[i].split(" ").join("");
+            finAnswers.push(sessionStorage.getItem(txt))
+            concHtml = concHtml+'<div class="card-body"><div class="row"><div class="col"><h5>'+cardHeaders[i]+'</h5></div></div><div class="row"><div class="col">'+finAnswers[i]+'<hr></div></div></div>' 
+         }
+         concHtml = concHtml + '<div class="row"><div class="col"><a href="" class="btn btn-primary text-white">Submit</a></div></div>';
+         document.querySelector('#cardHeader').innerHTML = 'Finished';
+         document.querySelector('.card-body').innerHTML = concHtml;
+        }
     //function for next button to rerun functions and change the questions    
     function incProgress(){
         var dList = [];
@@ -111,7 +117,6 @@
          }
         txt = document.getElementById('cardHeader').innerText
         let concatText = txt.split(" ").join("")
-        console.log(concatText,dList)
         sessionStorage.setItem(concatText,dList)
 
         if (progress+1 <= questionGroups.length-1){
@@ -120,24 +125,14 @@
         document.querySelector('#progressBar').innerHTML = (Math.round(100/questionGroups.length)*(progress+1)) +'%'
         document.querySelector('#progressBar').setAttribute('style','width:'+(100/questionGroups.length*(progress+1))+'%');
         document.querySelector('#cardHeader').innerHTML = cardHeaders[progress];
-        console.log('In the increment function',progress);
         let newHtml = buildQuestions(progress);
         document.querySelector('.card-body').innerHTML = newHtml;
-        // document.querySelector('#image').src = imgLocs[0]; **FIX ME** uncomment and correct when image library is created.   
-        //**FIX ME** add functions for generating html for the final page.  
-        for(i=0;i<progress;i++){
-            let txt = cardHeaders[i].split(" ").join("")
-            console.log('from storage',sessionStorage.getItem(txt))
-            }}else{
-            console.log('questions finished')
-            document.querySelector('.card-body').innerHTML = 'All Finshed\n Submit';
-            document.querySelector('#cardHeader').innerHTML = 'Finished';
-            
+        }else{
+            makeFinished();
+
         }
     }
-     // **FIX ME*** update mail address with selected option and add correct information ot body from local stoarge. 
-            // window.open('mailto:test@example.com');
-            // completedForm = 'This still needs filled out';
-            // window.open('mailto:test@example.com?subject="Vehicle noise concerns"&body="'+completedForm+'"');
+    
+  
 
 
